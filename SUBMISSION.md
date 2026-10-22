@@ -7,7 +7,7 @@
 - [x] Six matching Wazuh alerts verified
 - [x] Rule 2502 investigation documented
 - [x] Eight approved evidence screenshots selected
-- [ ] Upload eight screenshots to `task-01-wazuh-soc-lab/evidence/`
+- [x] Upload eight screenshots to `task-01-wazuh-soc-lab/evidence/`
 - [ ] Rotate previously exposed lab credentials
 - [ ] Send final project link to NEXLEVR and await review
 
