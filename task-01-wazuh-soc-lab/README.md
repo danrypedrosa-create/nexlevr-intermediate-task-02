@@ -1,6 +1,6 @@
 # Intermediate Task 01 — Wazuh Home SOC Lab
 
-**Status:** Technical test complete; eight screenshots selected, pending upload to GitHub.  
+**Status:** Technical test complete; eight evidence screenshots uploaded to GitHub; credential rotation pending.  
 **Date:** October 22, 2026  
 **Scope:** Personal training lab, not production.
 
@@ -89,7 +89,7 @@ A single all-in-one VM was used. Remote agent registration, multi-host monitorin
 
 ## Evidence
 
-Eight approved screenshots were supplied for this task. They exclude the earlier screenshots exposing passwords. See [evidence/README.md](evidence/README.md) for the exact list and upload status.
+Eight approved screenshots were supplied for this task. They exclude the earlier screenshots exposing passwords. See [evidence/README.md](evidence/README.md) for all eight verified files and their exact filenames.
 
 ## Security note
 
