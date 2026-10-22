@@ -1,0 +1,25 @@
+title: Windows Scheduled Task Created
+id: eb9b2d2a-e31a-4a83-ac11-e5356cc1317d
+status: experimental
+description: Detects Windows Security Event ID 4698 when a scheduled task is created. Review the task action, creator, and target host to determine intent.
+author: NEXLEVR Intermediate Lab
+date: 2026-10-22
+logsource:
+    product: windows
+    service: security
+    definition: Requires Audit Other Object Access Events with scheduled task creation auditing enabled.
+detection:
+    selection:
+        EventID: 4698
+    condition: selection
+fields:
+    - TaskName
+    - SubjectUserName
+    - TaskContent
+falsepositives:
+    - Windows and third-party software installers create scheduled tasks.
+    - Authorized administration, backup, and maintenance jobs.
+level: medium
+tags:
+    - attack.persistence
+    - attack.t1053.005

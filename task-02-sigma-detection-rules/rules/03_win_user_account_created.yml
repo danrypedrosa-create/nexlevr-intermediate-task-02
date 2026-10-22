@@ -1,0 +1,25 @@
+title: Windows User Account Created
+id: 2bd167db-4c88-4b65-90e4-4f68b43d0bb3
+status: experimental
+description: Detects Windows Security Event ID 4720 indicating that a user account was created. This event alone does not distinguish local from domain accounts or legitimate from malicious creation.
+author: NEXLEVR Intermediate Lab
+date: 2026-10-22
+logsource:
+    product: windows
+    service: security
+    definition: Requires successful User Account Management auditing.
+detection:
+    selection:
+        EventID: 4720
+    condition: selection
+fields:
+    - SubjectUserName
+    - TargetUserName
+    - Computer
+falsepositives:
+    - Authorized HR onboarding and helpdesk account provisioning.
+    - Test or service account creation approved by IT.
+level: medium
+tags:
+    - attack.persistence
+    - attack.t1136

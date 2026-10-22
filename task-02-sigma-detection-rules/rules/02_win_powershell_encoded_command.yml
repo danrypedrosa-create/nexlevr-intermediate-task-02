@@ -1,0 +1,30 @@
+title: Windows PowerShell Encoded Command Line
+id: 54d1fd3b-896b-4d9c-9e2b-1ee83e79ab55
+status: experimental
+description: Detects PowerShell process creation where the command line contains an EncodedCommand parameter. Such encoding can be used by benign automation or malicious scripts.
+author: NEXLEVR Intermediate Lab
+date: 2026-10-22
+logsource:
+    product: windows
+    category: process_creation
+    definition: Requires process command-line capture (e.g., Windows 4688 with command line or Sysmon Event 1).
+detection:
+    selection:
+        Image|endswith:
+            - '\powershell.exe'
+            - '\pwsh.exe'
+        CommandLine|contains:
+            - ' -EncodedCommand '
+            - ' -enc '
+    condition: selection
+fields:
+    - Image
+    - CommandLine
+    - User
+falsepositives:
+    - Legitimate enterprise administration scripts sometimes use EncodedCommand.
+    - Software deployment tools may launch encoded PowerShell commands.
+level: medium
+tags:
+    - attack.execution
+    - attack.t1059.001

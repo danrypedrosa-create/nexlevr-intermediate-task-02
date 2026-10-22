@@ -1,0 +1,27 @@
+title: Windows Defender Real Time Protection Disable Policy Value Set
+id: a9a94817-3681-46da-9298-45874e5cd22e
+status: experimental
+description: Detects a Sysmon registry value-set event writing 1 to the DisableRealtimeMonitoring value. This is an attempted policy change and does not prove Windows Defender was disabled.
+author: NEXLEVR Intermediate Lab
+date: 2026-10-22
+logsource:
+    product: windows
+    service: sysmon
+    definition: Requires Sysmon registry value-set Event ID 13 collection.
+detection:
+    selection:
+        EventID: 13
+        TargetObject|endswith: '\Microsoft\Windows Defender\Real-Time Protection\DisableRealtimeMonitoring'
+        Details|contains: '0x00000001'
+    condition: selection
+fields:
+    - Image
+    - TargetObject
+    - Details
+falsepositives:
+    - Approved endpoint management changes or test labs may set Defender policy keys.
+    - Registry value writes might be blocked or ignored by tamper protection and do not confirm Defender actually changed state.
+level: medium
+tags:
+    - attack.defense_evasion
+    - attack.t1562.001
