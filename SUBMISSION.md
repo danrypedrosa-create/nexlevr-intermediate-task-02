@@ -22,8 +22,8 @@
 - [x] Prepare and compare ten model-generated assessments
 - [x] Prepare eight additional first-person answer drafts (Alerts 03–10) for review
 - [x] Write the comparison and findings with evidence limitations
+- [x] Keep Task 03 focused on the ten answers and the side-by-side comparison; no screenshot deliverable is required
 - [ ] Independently review Alerts 03–10 if NEXLEVR requires ten personal verdicts
-- [ ] Capture additional screenshots if requested
 - [ ] Submit Task 03 and await NEXLEVR review
 
 These files document my training project. They do not establish certification, evaluator approval or production investigations.

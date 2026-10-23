@@ -52,6 +52,5 @@ The data is fictional and some log records are only excerpts. No IPs, hashes, fi
 - [Ten synthetic alert cases](alerts/)
 - [My two original verdicts, eight answer drafts and ten model assessments](analysis/)
 - [Comparison table](COMPARISON.md)
-- [Evidence checklist](evidence/README.md)
 
-The written project is organized for review. A full independent ten-alert comparison and NEXLEVR evaluator approval are still outstanding.
+The assignment requires written triage answers and a verdict comparison, not screenshots. The written project is organized for review. A full independent ten-alert comparison and NEXLEVR evaluator approval are still outstanding.

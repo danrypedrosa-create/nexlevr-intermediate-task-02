@@ -6,14 +6,17 @@ In this exercise, I worked with ten **simulated security alerts** to practice re
 
 I recorded my own verdicts for **Alerts 01 and 02**. For Alerts 03–10, draft answers are now available for review alongside the model-generated triage examples. I have not independently reviewed or signed off on those eight drafts. I also compared the two verdicts I recorded with the model's classifications.
 
+## Required submissions
+
+I need to submit the ten alert triage answers and a comparison of my verdicts with AI assessments. This Task 03 assignment does **not** request evidence screenshots.
+
 ## Project files
 
 - [Alert dataset](alerts/) — ten simulated alerts and supporting event excerpts
 - [Investigation notes](analysis/) — my two original verdicts, eight prepared answer drafts, and ten model-generated triage examples
-- **[My Verdict vs AI Verdict](MY-VERDICT-VS-AI.md)** — side-by-side results, reasoning, severity and recommended actions
-- [Detailed comparison](COMPARISON.md) — verdicts, severity differences and missing evidence
+- **[My Verdict vs AI Verdict](MY-VERDICT-VS-AI.md)** — side-by-side verdicts and severities for all ten alerts, with prepared answers for Alerts 03–10 labeled as drafts
+- [Detailed comparison](COMPARISON.md) — all ten verdicts, key differences and what cannot yet be verified
 - [Final report](FINAL-REPORT.md) — what I learned and my recommended SOC approach
-- [Evidence folder](evidence/) — screenshot checklist
 
 ## Results
 

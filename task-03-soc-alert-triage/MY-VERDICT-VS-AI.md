@@ -1,6 +1,6 @@
 # Task 03 — My Verdict vs AI Verdict
 
-I placed my independent decisions beside the AI classifications so I can compare them quickly. All ten alert cases are **synthetic training data**, not real client investigations.
+I placed my original verdicts (Alerts 01–02) and prepared answers (Alerts 03–10) beside the AI classifications so I can compare them quickly. All ten alert cases are **synthetic training data**, not real client investigations.
 
 ## At-a-glance verdict comparison
 
@@ -8,18 +8,18 @@ I placed my independent decisions beside the AI classifications so I can compare
 |:---:|---|---|---|---|---|---|
 | [01](alerts/alert-01.md) | SSH brute-force activity | **True Positive** | **Medium** | True Positive (suspicious activity) | Medium | **Same verdict and severity** |
 | [02](alerts/alert-02.md) | Successful SSH login after failures | **To Be Confirmed** | **Medium** | To Be Confirmed | High | **Same verdict, different severity** |
-| [03](alerts/alert-03.md) | Suspicious PowerShell execution | — | — | True Positive (suspicious activity) | High | My independent verdict not recorded |
-| [04](alerts/alert-04.md) | Possible internal port scan | — | — | To Be Confirmed | Medium | My independent verdict not recorded |
-| [05](alerts/alert-05.md) | Credential-phishing email | — | — | True Positive (suspicious activity) | Medium | My independent verdict not recorded |
-| [06](alerts/alert-06.md) | Approved scheduled task | — | — | False Positive (authorized activity) | Low | My independent verdict not recorded |
-| [07](alerts/alert-07.md) | Authorized EICAR antivirus test | — | — | False Positive (not a malware incident) | Low | My independent verdict not recorded |
-| [08](alerts/alert-08.md) | Periodic outbound connections | — | — | To Be Confirmed | High | My independent verdict not recorded |
-| [09](alerts/alert-09.md) | Approved off-hours RDP login | — | — | False Positive (authorized activity) | Low | My independent verdict not recorded |
-| [10](alerts/alert-10.md) | Large outbound rclone transfer | — | — | To Be Confirmed | High | My independent verdict not recorded |
+| [03](alerts/alert-03.md) | Suspicious PowerShell execution | **True Positive*** | **High*** | True Positive (suspicious activity) | High | [Prepared answer](analysis/alert-03-answer-draft.md); not independent |
+| [04](alerts/alert-04.md) | Possible internal port scan | **To Be Confirmed*** | **Medium*** | To Be Confirmed | Medium | [Prepared answer](analysis/alert-04-answer-draft.md); not independent |
+| [05](alerts/alert-05.md) | Credential-phishing email | **True Positive*** | **Medium*** | True Positive (suspicious activity) | Medium | [Prepared answer](analysis/alert-05-answer-draft.md); not independent |
+| [06](alerts/alert-06.md) | Approved scheduled task | **False Positive*** | **Low*** | False Positive (authorized activity) | Low | [Prepared answer](analysis/alert-06-answer-draft.md); not independent |
+| [07](alerts/alert-07.md) | Authorized EICAR antivirus test | **False Positive*** | **Low*** | False Positive (not a malware incident) | Low | [Prepared answer](analysis/alert-07-answer-draft.md); not independent |
+| [08](alerts/alert-08.md) | Periodic outbound connections | **To Be Confirmed*** | **High*** | To Be Confirmed | High | [Prepared answer](analysis/alert-08-answer-draft.md); not independent |
+| [09](alerts/alert-09.md) | Approved off-hours RDP login | **False Positive*** | **Low*** | False Positive (authorized activity) | Low | [Prepared answer](analysis/alert-09-answer-draft.md); not independent |
+| [10](alerts/alert-10.md) | Large outbound rclone transfer | **To Be Confirmed*** | **High*** | To Be Confirmed | High | [Prepared answer](analysis/alert-10-answer-draft.md); not independent |
 
 **TP** = True Positive (suspicious behavior detected, not automatically a confirmed compromise). **FP** = False Positive as a malicious-incident classification. **TBC** = To Be Confirmed.
 
-A dash (—) means I did **not** independently record a personal verdict for that case. The write-ups and answer drafts for Alerts 03–10 were prepared by the model and need my own review. They are not separate independent human verdicts.
+\* **Prepared answer awaiting my review.** Alerts 03–10 now show actual proposed verdicts and severity levels. These were drafted by the model, not independently given by me, so matching model verdicts are not independent agreements.
 
 ## Prepared Answers for Alerts 03–10
 
@@ -66,7 +66,7 @@ These are **ready-to-review answer drafts**, not verdicts I independently gave. 
 
 - **Verdict agreement:** 2 of 2 cases where I gave my own independent verdict.
 - **Severity agreement:** 1 of 2 comparable cases.
-- **Missing comparison:** Alerts 03–10 have answer drafts but not separate personal verdicts, so I cannot count them as agreements or disagreements.
+- **Prepared comparisons:** Alerts 03–10 have proposed verdicts and severity levels in the main table. The model prepared both sides, so their matches cannot count as independent agreement.
 - **Accuracy:** I am not reporting an AI accuracy rate because these synthetic cases do not provide enough independent ground truth.
 
 My main takeaway is to check the available evidence, verify whether the activity was authorized, and avoid claiming compromise or malicious intent when the logs do not prove it.
