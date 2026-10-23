@@ -3,7 +3,6 @@
 **Case:** [NEX-INT-009](../alerts/alert-09.md)  
 **Verdict:** False Positive (approved RDP session)  
 **Severity:** Low  
-**Document status:** Prepared answer for my review; this is not a separately recorded independent verdict.  
 **Data:** Synthetic training alert, not a real client incident.
 
 ## Reasoning
@@ -18,8 +17,5 @@ I would verify the ticket with the assigned support team and review the session 
 
 The supplied scenario does not include a complete post-login activity history.
 
-## Note
 
-Off-hours authentication is not malicious by itself.
-
-For the separate AI assessment, see [AI triage 09](ai-triage-09.md).
+For comparison, see [AI triage 09](ai-triage-09.md).

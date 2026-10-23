@@ -20,7 +20,7 @@
 - [x] Document ten synthetic alert cases and supporting excerpts
 - [x] Record my own verdicts for Alerts 01 and 02
 - [x] Prepare and compare ten model-generated assessments
-- [x] Prepare eight additional first-person answer drafts (Alerts 03–10) for review
+- [x] Write full answers for Alerts 03–10 using the provided synthetic logs (model-generated for review)
 - [x] Write the comparison and findings with evidence limitations
 - [x] Keep Task 03 focused on the ten answers and the side-by-side comparison; no screenshot deliverable is required
 - [ ] Independently review Alerts 03–10 if NEXLEVR requires ten personal verdicts

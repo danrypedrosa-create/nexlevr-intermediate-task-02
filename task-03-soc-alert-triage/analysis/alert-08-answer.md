@@ -3,7 +3,6 @@
 **Case:** [NEX-INT-008](../alerts/alert-08.md)  
 **Verdict:** To Be Confirmed  
 **Severity:** High  
-**Document status:** Prepared answer for my review; this is not a separately recorded independent verdict.  
 **Data:** Synthetic training alert, not a real client incident.
 
 ## Reasoning
@@ -18,8 +17,5 @@ I would investigate the parent process, command line and loaded DLLs, then check
 
 No payload, destination reputation, process parent or authorization evidence is included.
 
-## Note
 
-Repeated periodic traffic can suggest beaconing without proving it.
-
-For the separate AI assessment, see [AI triage 08](ai-triage-08.md).
+For comparison, see [AI triage 08](ai-triage-08.md).

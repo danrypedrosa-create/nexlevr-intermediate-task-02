@@ -3,7 +3,6 @@
 **Case:** [NEX-INT-005](../alerts/alert-05.md)  
 **Verdict:** True Positive (phishing indicators)  
 **Severity:** Medium  
-**Document status:** Prepared answer for my review; this is not a separately recorded independent verdict.  
 **Data:** Synthetic training alert, not a real client incident.
 
 ## Reasoning
@@ -18,8 +17,5 @@ I would preserve the message and headers, search for other recipients, and reque
 
 User clicks, credential entry and account compromise are not confirmed.
 
-## Note
 
-A phishing attempt is not the same as a successful account takeover.
-
-For the separate AI assessment, see [AI triage 05](ai-triage-05.md).
+For comparison, see [AI triage 05](ai-triage-05.md).

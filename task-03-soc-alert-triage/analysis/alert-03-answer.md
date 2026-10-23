@@ -3,7 +3,6 @@
 **Case:** [NEX-INT-003](../alerts/alert-03.md)  
 **Verdict:** True Positive (suspicious behavior)  
 **Severity:** High  
-**Document status:** Prepared answer for my review; this is not a separately recorded independent verdict.  
 **Data:** Synthetic training alert, not a real client incident.
 
 ## Reasoning
@@ -18,8 +17,5 @@ I would check the document's source and hash, safely review the encoded PowerShe
 
 The contents of the encoded command, the network response, and any later endpoint activity are unknown.
 
-## Note
 
-PowerShell launched by Word is suspicious but not automatic proof of compromise.
-
-For the separate AI assessment, see [AI triage 03](ai-triage-03.md).
+For comparison, see [AI triage 03](ai-triage-03.md).

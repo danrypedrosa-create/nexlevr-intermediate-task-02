@@ -3,7 +3,6 @@
 **Case:** [NEX-INT-004](../alerts/alert-04.md)  
 **Verdict:** To Be Confirmed  
 **Severity:** Medium  
-**Document status:** Prepared answer for my review; this is not a separately recorded independent verdict.  
 **Data:** Synthetic training alert, not a real client incident.
 
 ## Reasoning
@@ -18,8 +17,5 @@ I would check whether the source IP belongs to an approved scanner and review sc
 
 The source IP has not been checked against the authorized scanner list; no application compromise evidence was supplied.
 
-## Note
 
-A scan pattern can be confirmed without assuming malicious intent.
-
-For the separate AI assessment, see [AI triage 04](ai-triage-04.md).
+For comparison, see [AI triage 04](ai-triage-04.md).

@@ -3,7 +3,6 @@
 **Case:** [NEX-INT-010](../alerts/alert-10.md)  
 **Verdict:** To Be Confirmed  
 **Severity:** High  
-**Document status:** Prepared answer for my review; this is not a separately recorded independent verdict.  
 **Data:** Synthetic training alert, not a real client incident.
 
 ## Reasoning
@@ -18,8 +17,5 @@ I would check the rclone command line, transfer logs, file access records, proxy
 
 File names, data sensitivity, transfer purpose and destination ownership are not available.
 
-## Note
 
-Large traffic volume is a risk indicator, not proof of sensitive-data theft.
-
-For the separate AI assessment, see [AI triage 10](ai-triage-10.md).
+For comparison, see [AI triage 10](ai-triage-10.md).

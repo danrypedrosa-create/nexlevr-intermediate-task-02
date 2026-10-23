@@ -6,7 +6,7 @@ My goal was to practice reviewing security alerts, identifying suspicious behavi
 
 ## Method
 
-I used **ten synthetic alerts**, not production SOC or client data. I independently recorded my decisions for **Alerts 01 and 02** before reviewing the corresponding model assessments. For Alerts 03–10, I now have prepared answer drafts and model-generated example reviews to read. The drafts were produced by the model, so I do not count them as my own independent decisions.
+I used **ten synthetic alerts**, not production SOC or client data. I independently recorded my decisions for **Alerts 01 and 02** before reviewing the corresponding model assessments. For Alerts 03–10, ChatGPT prepared complete written answers based on the simulated evidence. I can review those answers, but I cannot count them as separate independent judgments against ChatGPT's own triage results.
 
 I only worked with the details supplied in the simulated cases. I did not perform live log searches, endpoint scans, IP reputation checks, user confirmation or containment.
 
@@ -17,7 +17,7 @@ I only worked with the details supplied in the simulated cases. I did not perfor
 | Simulated alerts documented | 10 |
 | Model-generated reviews | 10 |
 | My independent verdicts | 2 |
-| Prepared answer drafts awaiting my review | 8 |
+| Additional written answers for Alerts 03–10 | 8 |
 | Broad verdict agreements for those 2 | 2 of 2 |
 | Severity agreement for those 2 | 1 of 2 |
 | Confirmed real security incidents | 0 |
@@ -33,7 +33,7 @@ These results describe a small training comparison, **not an AI accuracy score**
 
 **Alert 03 — Encoded PowerShell:** The sample shows Word launching hidden encoded PowerShell before an outbound TCP connection. This is a suspicious pattern worth investigating, but I cannot confirm a malicious macro, completed data transfer or endpoint compromise from the supplied logs.
 
-**Alerts 04–10:** The remaining simulated cases cover port scanning, phishing, scheduled task creation, antivirus testing, periodic outbound traffic, RDP access and possible data exfiltration. I have answer drafts for each scenario under [analysis](analysis/) and can review their reasoning before forming my own view. Their model-generated triage assessments are included in the [comparison](COMPARISON.md).
+**Alerts 04–10:** The remaining simulated cases cover port scanning, phishing, scheduled task creation, antivirus testing, periodic outbound traffic, RDP access and possible data exfiltration. I have full written answers for each scenario under [analysis](analysis/) and can review their reasoning before forming my own view. Their model-generated triage assessments are included in the [comparison](COMPARISON.md).
 
 ## What I learned
 
@@ -50,7 +50,7 @@ The data is fictional and some log records are only excerpts. No IPs, hashes, fi
 ## Project files
 
 - [Ten synthetic alert cases](alerts/)
-- [My two original verdicts, eight answer drafts and ten model assessments](analysis/)
+- [Ten written answers and ten model assessments](analysis/)
 - [Comparison table](COMPARISON.md)
 
 The assignment requires written triage answers and a verdict comparison, not screenshots. The written project is organized for review. A full independent ten-alert comparison and NEXLEVR evaluator approval are still outstanding.

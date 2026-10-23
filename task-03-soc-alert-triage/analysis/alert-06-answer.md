@@ -3,7 +3,6 @@
 **Case:** [NEX-INT-006](../alerts/alert-06.md)  
 **Verdict:** False Positive (authorized activity)  
 **Severity:** Low  
-**Document status:** Prepared answer for my review; this is not a separately recorded independent verdict.  
 **Data:** Synthetic training alert, not a real client incident.
 
 ## Reasoning
@@ -18,8 +17,5 @@ I would verify the change ticket and task owner, review the script path and task
 
 The change record supports legitimacy in this simulated case; the full script content is not shown.
 
-## Note
 
-A real detection can still represent benign, approved activity.
-
-For the separate AI assessment, see [AI triage 06](ai-triage-06.md).
+For comparison, see [AI triage 06](ai-triage-06.md).
