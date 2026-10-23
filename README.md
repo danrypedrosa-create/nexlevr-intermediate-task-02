@@ -4,9 +4,9 @@ Hands-on cybersecurity training projects using personal laboratory systems and s
 
 | Task | Requirement | Status |
 | --- | --- | --- |
-| [01 — Wazuh SOC Lab](task-01-wazuh-soc-lab/README.md) | Set up a virtual SIEM, generate test activity, show alerts | **Technical testing and eight evidence screenshots uploaded; credential rotation pending** |
-| [02 — Sigma Detection Rules](task-02-sigma-detection-rules/README.md) | Write five Sigma rules, test sample logs, explain false-positive risk | Not started |
-| [03 — AI-Assisted Alert Triage](task-03-ai-assisted-alert-triage/README.md) | Independently triage ten alerts and compare with AI verdicts | Not started |
+| [01 — Wazuh SOC Lab](task-01-wazuh-soc-lab/README.md) | Set up a virtual SIEM, generate test activity, show alerts | Technical testing and eight evidence screenshots uploaded; credential rotation pending |
+| [02 — Sigma Detection Rules](task-02-sigma-detection-rules/README.md) | Write five Sigma rules, test sample logs, explain false-positive risk | Five rules tested with 15/15 outcomes using limited synthetic matcher; screenshots saved; official Sigma CLI validation pending |
+| [03 — SOC Alert Triage](task-03-ai-assisted-alert-triage/README.md) | Document ten alerts and compare human/AI decisions | Ten synthetic cases and AI reviews documented; independent human verdicts exist for 2/10, not all ten |
 
 ## Task 01 — Verified findings
 
@@ -16,6 +16,6 @@ These events were intentionally generated in an authorized training lab. They do
 
 The new VM was separate from the existing Kali, pfSense, and original Wazuh home labs. No real customer data was used.
 
-The eight reviewed screenshots are now uploaded in [Task 01 evidence](task-01-wazuh-soc-lab/evidence/). The older screenshots containing passwords are excluded. Previously exposed Wazuh lab credentials should be rotated.
+The eight reviewed screenshots are uploaded in [Task 01 evidence](task-01-wazuh-soc-lab/evidence/). The older screenshots containing passwords are excluded. Previously exposed Wazuh lab credentials should be rotated.
 
 See [SUBMISSION.md](SUBMISSION.md) for the remaining checklist.
