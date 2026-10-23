@@ -12,9 +12,10 @@
 - [ ] Send final project link to NEXLEVR and await review
 
 ## Task 02 — Five Sigma Rules
-- [ ] Write five Sigma YAML detection rules
-- [ ] Test each against positive and negative sample events
-- [ ] Document results and false-positive risks
+- [x] Write five Sigma YAML detection rules
+- [x] Run limited synthetic positive, negative, and benign sample matcher (15/15); personal rerun and official Sigma validation pending
+- [x] Document five false-positive examples and test limits
+- [ ] Capture personal Mokka test evidence and check official Sigma compatibility
 
 ## Task 03 — AI-Assisted Alert Triage
 - [ ] Analyze ten sanitized/lab alerts independently
