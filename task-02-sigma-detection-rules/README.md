@@ -43,11 +43,11 @@ For proper Sigma rule validation later, use the [official Sigma CLI](https://git
 
 ## Evidence screenshots uploaded
 
-The three PNGs were uploaded directly to this Task 02 folder, not to an `evidence/` subfolder:
+The three PNGs are organized in the dedicated [`evidence/`](evidence/) folder, separate from the [`samples/`](samples/) folder:
 
-- [01-rule-files.png](01-rule-files.png): five YAML filenames in the Mokka terminal, with GitHub repository view.
-- [02-synthetic-tests.png](02-synthetic-tests.png): 15/15 expected outcomes from the limited Python matcher on Mokka.
-- [03-rule-and-false-positives.png](03-rule-and-false-positives.png): PowerShell YAML rule, detection, falsepositives, and ATT&CK tags.
+- [01-rule-files.png](evidence/01-rule-files.png): five YAML filenames in the Mokka terminal, with GitHub repository view.
+- [02-synthetic-tests.png](evidence/02-synthetic-tests.png): 15/15 expected outcomes from the limited Python matcher on Mokka.
+- [03-rule-and-false-positives.png](evidence/03-rule-and-false-positives.png): PowerShell YAML rule, detection, falsepositives, and ATT&CK tags.
 
 **Fish shell note:** Use `source .venv/bin/activate.fish` on Mokka. The uploaded terminal screenshot shows a harmless failed attempt to source the Bash activation file, followed by successful execution of `python test_rules.py`.
 
