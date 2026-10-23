@@ -1,30 +1,29 @@
 # Intermediate Task 03 — SOC Alert Triage
 
-**Status:** Training dataset, model triage notes, comparison and final report prepared. Two independent analyst reviews were recorded; the remaining eight were not independently assessed. Submission approval is pending.
+## Overview
 
-## Objective
+In this exercise, I worked with ten **simulated security alerts** to practice reviewing logs, classifying suspicious activity and comparing SOC decisions.
 
-Investigate ten simulated SOC alerts, compare independent analyst judgments with AI classifications where possible, and identify unsupported assumptions or overconfidence.
+I recorded my own verdicts for **Alerts 01 and 02**. For Alerts 03–10, I used model-generated triage examples to complete the training documentation; I have not independently reviewed those eight cases. I also compared the two verdicts I recorded with the model's classifications.
 
-## Files
+## Project files
 
-- [Ten synthetic security alerts](alerts/) — detailed event context and log excerpts
-- [Triage notes](analysis/) — independent original analyst assessments for Alerts 01 and 02, plus ten model-generated triage reports
-- [Comparison table](COMPARISON.md) — human and AI verdicts with clearly marked unavailable comparisons
-- [Final report](FINAL-REPORT.md) — findings, limitations, and recommendations
-- [Evidence checklist](evidence/README.md) — how to capture report and case screenshots
+- [Alert dataset](alerts/) — ten simulated alerts and supporting event excerpts
+- [Investigation notes](analysis/) — my two original verdicts and ten model-generated triage examples
+- [Comparison](COMPARISON.md) — verdicts, severity differences and missing evidence
+- [Final report](FINAL-REPORT.md) — what I learned and my recommended SOC approach
+- [Evidence folder](evidence/) — screenshot checklist
 
-## Quick results
+## Results
 
-| Item | Count |
+| Item | Result |
 |---|---|
-| Simulated alerts | 10 |
-| AI classifications | 10 |
-| Independent analyst classifications | 2 |
-| Broad verdict agreement among comparable cases | 2 |
-| Comparable cases with differing severity | 1 |
-| Independent verdicts for Alerts 03–10 | 0 |
+| Simulated alerts reviewed in the documentation | 10 |
+| My independently recorded verdicts | 2 |
+| Model-generated triage classifications | 10 |
+| Verdict agreements in the two directly comparable cases | 2 |
+| Severity disagreements in those cases | 1 |
 
-This is a **documentation and learning exercise**, not production SOC triage. No measured AI accuracy is claimed. The AI did not independently verify any live IPs, hosts, files, or service activity. The sample alert events are fictional and use documentation-only addresses.
+The logs and IP addresses in this project are fictional. I did not query live security systems or customer records, so I do **not** treat these results as a measured AI accuracy benchmark.
 
-**NEXLEVR requirement note:** A complete ten-case independently written human-vs-AI assessment still needs analyst review if the evaluator requires independent human verdicts for all ten alerts. Do not claim that the AI-generated entries are those human assessments.
+The report is prepared, but I still need eight additional independent judgments for a full ten-alert human-versus-model comparison if NEXLEVR specifically requires one.

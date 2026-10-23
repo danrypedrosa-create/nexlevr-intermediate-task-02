@@ -1,35 +1,37 @@
-# SOC Alert Triage — Human and AI Comparison
+# SOC Alert Triage — Verdict Comparison
 
-**Dataset:** Ten fictional security alerts. **Independent analyst verdicts:** Alerts 01 and 02. **AI verdicts:** all ten. **Alerts 03–10 were not independently assessed by the analyst.**
+I prepared ten fictional alerts and compared the two verdicts I independently recorded with the model's assessments. For Alerts 03–10, I have not recorded a separate personal verdict.
 
-| Alert | Scenario | Analyst verdict / severity | AI verdict / severity | Comparison |
+| Alert | Scenario | My verdict / severity | Model verdict / severity | Observation |
 |---|---|---|---|---|
-| 01 | 47 SSH password failures across usernames | TP / Medium | TP / Medium | Verdict and severity agree; no confirmed compromise |
-| 02 | 18 SSH failures followed by successful deploy login | TBC / Medium | TBC / High | Verdict agrees; severity differs; source authorization remains unknown |
-| 03 | Word launches hidden encoded PowerShell and connection | Not independently assessed | TP (suspicious activity) / High | AI-only example; cannot count as agreement |
-| 04 | Internal port scan | Not independently assessed | TBC / Medium | Authorization unknown |
-| 05 | Credential-phishing message | Not independently assessed | TP (suspicious activity) / Medium | Delivery shown; credential theft unconfirmed |
-| 06 | Approved scheduled task | Not independently assessed | FP (authorized change) / Low | Approval supplied in simulated case |
-| 07 | Authorized EICAR antivirus test | Not independently assessed | FP (not a malware incident) / Low | Genuine test alert, not a confirmed infection |
-| 08 | Periodic outbound rundll32 connections | Not independently assessed | TBC / High | Suspected beaconing not proven |
-| 09 | Approved off-hours RDP login | Not independently assessed | FP (authorized support) / Low | Ticket and MFA match |
-| 10 | High-volume rclone transfer | Not independently assessed | TBC / High | Traffic volume shown; sensitive-data theft unproven |
+| 01 | SSH failed passwords (47 attempts) | TP / Medium | TP / Medium | We agree; no account compromise is confirmed |
+| 02 | SSH login after 18 failed attempts | TBC / Medium | TBC / High | We agree on TBC but differ on severity |
+| 03 | Word launches encoded PowerShell | Not independently assessed | TP (suspicious pattern) / High | Needs payload and endpoint review |
+| 04 | Possible internal port scan | Not independently assessed | TBC / Medium | Authorized scanning not ruled out |
+| 05 | Credential-phishing email | Not independently assessed | TP (suspicious pattern) / Medium | Delivered email; no confirmed credential theft |
+| 06 | New approved scheduled task | Not independently assessed | FP (authorized activity) / Low | Change approval matches |
+| 07 | EICAR test-file detection | Not independently assessed | FP (not a real malware infection) / Low | Approved test and quarantine |
+| 08 | Repeated rundll32 outbound traffic | Not independently assessed | TBC / High | C2 is possible, not verified |
+| 09 | Off-hours RDP login | Not independently assessed | FP (authorized activity) / Low | Ticket and MFA match |
+| 10 | Large rclone outbound transfer | Not independently assessed | TBC / High | Data theft is not confirmed |
 
-**TP** means the suspicious pattern was correctly detected, not that compromise was established. **FP** here means no malicious incident is indicated by the available scenario context; the underlying telemetry can still be accurate. **TBC** means verification is needed.
+## My findings
 
-## Comparison findings
+For **Alert 01**, I chose True Positive and Medium severity because 47 failed logins in five minutes were suspicious. The model agreed. Neither assessment confirms a successful login.
 
-- **Alert 01:** Both assessments identify likely password guessing and give Medium severity. The five log excerpts are not a full incident history.
-- **Alert 02:** Both leave the login as TBC. The analyst chose Medium; the AI recommended High. The deployment account's permissions and the source's authorization would determine escalation.
-- **Alerts 03–10:** There is no separate analyst verdict, so agreement, disagreement, or accuracy for these eight cannot be calculated. Their responses are model-generated demonstrations.
-- **Overconfidence risks:** It would exceed the evidence to say there was a proven account takeover (01–02), confirmed document-based malware (03), proven C2 beaconing (08), or confirmed sensitive-data exfiltration (10).
-- **True ground truth is limited:** Authorized test/change information is explicitly supplied for synthetic Alerts 06, 07, and 09. The remaining cases lack conclusive investigation evidence.
+For **Alert 02**, I chose TBC and Medium severity because the source IP and deployment purpose had not been verified. The model also chose TBC but recommended High severity because the `deploy` account successfully authenticated after multiple failures.
 
-**No human-vs-AI accuracy rate is reported.** Agreement on two hand-selected synthetic scenarios is not a meaningful accuracy benchmark.
+For **Alerts 03–10**, I can review the provided triage examples and note the evidence gaps, but I cannot claim an independent verdict or a valid agreement rate.
 
-## Original independent assessments
+The main risk I noticed is **overconfidence**. I should not classify a confirmed account compromise, malware infection, command-and-control connection, or data exfiltration without supporting evidence. Approved tasks, authorized tests and scheduled maintenance can also trigger valid detections.
 
-- [Alert 01](analysis/alert-01-manual.md)
-- [Alert 02 — revised](analysis/alert-02-manual.md)
+**Verdict definitions:** TP = correctly flagged suspicious activity, not necessarily confirmed compromise; FP = no malicious incident indicated by the supplied context; TBC = more verification needed.
 
-Full [alert dataset](alerts/) and [AI assessments](analysis/).
+## Source assessments
+
+- [My Alert 01 verdict](analysis/alert-01-manual.md)
+- [My revised Alert 02 verdict](analysis/alert-02-manual.md)
+- [Ten model-generated triage reviews](analysis/)
+- [Original simulated alerts](alerts/)
+
+I do not report an AI accuracy percentage because only two cases have independent verdicts and the dataset does not establish full ground truth.
