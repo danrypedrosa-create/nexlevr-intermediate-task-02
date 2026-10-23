@@ -10,7 +10,8 @@ I recorded my own verdicts for **Alerts 01 and 02**. For Alerts 03–10, I used 
 
 - [Alert dataset](alerts/) — ten simulated alerts and supporting event excerpts
 - [Investigation notes](analysis/) — my two original verdicts and ten model-generated triage examples
-- [Comparison](COMPARISON.md) — verdicts, severity differences and missing evidence
+- **[My Verdict vs AI Verdict](MY-VERDICT-VS-AI.md)** — side-by-side results, reasoning, severity and recommended actions
+- [Detailed comparison](COMPARISON.md) — verdicts, severity differences and missing evidence
 - [Final report](FINAL-REPORT.md) — what I learned and my recommended SOC approach
 - [Evidence folder](evidence/) — screenshot checklist
 
