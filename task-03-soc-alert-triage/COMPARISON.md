@@ -6,14 +6,14 @@ I prepared ten fictional alerts and compared the two verdicts I independently re
 |---|---|---|---|---|
 | 01 | SSH failed passwords (47 attempts) | TP / Medium | TP / Medium | We agree; no account compromise is confirmed |
 | 02 | SSH login after 18 failed attempts | TBC / Medium | TBC / High | We agree on TBC but differ on severity |
-| 03 | Word launches encoded PowerShell | TP / High* | TP (suspicious pattern) / High | Prepared draft; suspicious command chain, compromise not proven |
-| 04 | Possible internal port scan | TBC / Medium* | TBC / Medium | Prepared draft; verify approved scanner |
-| 05 | Credential-phishing email | TP / Medium* | TP (suspicious pattern) / Medium | Prepared draft; phishing signs, no proven credential theft |
-| 06 | New approved scheduled task | FP / Low* | FP (authorized activity) / Low | Prepared draft; approved task creation |
-| 07 | EICAR test-file detection | FP / Low* | FP (not a real malware infection) / Low | Prepared draft; EICAR test, not a malware incident |
-| 08 | Repeated rundll32 outbound traffic | TBC / High* | TBC / High | Prepared draft; possible beaconing, not confirmed |
-| 09 | Off-hours RDP login | FP / Low* | FP (authorized activity) / Low | Prepared draft; approved RDP session |
-| 10 | Large rclone outbound transfer | TBC / High* | TBC / High | Prepared draft; transfer requires verification |
+| 03 | Word launches encoded PowerShell | TP / High | TP (suspicious pattern) / High | Prepared draft; suspicious command chain, compromise not proven |
+| 04 | Possible internal port scan | TBC / Medium | TBC / Medium | Prepared draft; verify approved scanner |
+| 05 | Credential-phishing email | TP / Medium | TP (suspicious pattern) / Medium | Prepared draft; phishing signs, no proven credential theft |
+| 06 | New approved scheduled task | FP / Low | FP (authorized activity) / Low | Prepared draft; approved task creation |
+| 07 | EICAR test-file detection | FP / Low | FP (not a real malware infection) / Low | Prepared draft; EICAR test, not a malware incident |
+| 08 | Repeated rundll32 outbound traffic | TBC / High | TBC / High | Prepared draft; possible beaconing, not confirmed |
+| 09 | Off-hours RDP login | FP / Low | FP (authorized activity) / Low | Prepared draft; approved RDP session |
+| 10 | Large rclone outbound transfer | TBC / High | TBC / High | Prepared draft; transfer requires verification |
 
 ## My findings
 
@@ -25,7 +25,7 @@ For **Alerts 03–10**, I included the [prepared answer drafts](analysis/) in th
 
 The main risk I noticed is **overconfidence**. I should not classify a confirmed account compromise, malware infection, command-and-control connection, or data exfiltration without supporting evidence. Approved tasks, authorized tests and scheduled maintenance can also trigger valid detections.
 
-\* **Prepared draft, awaiting my own review.** Only Alerts 01 and 02 have independent verdicts for comparison.
+**Note:** Prepared drafts are awaiting my own review. Only Alerts 01 and 02 have independent verdicts for comparison.
 
 **Verdict definitions:** TP = correctly flagged suspicious activity, not necessarily confirmed compromise; FP = no malicious incident indicated by the supplied context; TBC = more verification needed.
 
