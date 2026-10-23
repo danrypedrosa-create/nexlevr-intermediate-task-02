@@ -1,6 +1,6 @@
 # NEXLEVR Intermediate Task 02 — Five Sigma Detection Rules
 
-**Status:** Five experimental YAML rules committed with 15 synthetic test events and a limited sample matcher. The supplied sample tests were run in an isolated development environment (15/15 expected outcomes). Your own Mokka-run evidence and official Sigma validation are **not yet confirmed**.
+**Status:** Five experimental YAML rules committed with 15 synthetic test events and a limited sample matcher. The supplied sample tests were run in an isolated development environment (15/15 expected outcomes). Mokka terminal evidence showing **15/15 expected outcomes** is uploaded. Official Sigma validation is **not yet confirmed**.
 
 ## Assignment
 
@@ -30,23 +30,28 @@ You can run these on your Garuda Linux host **without touching any Kali, pfSense
 git clone https://github.com/danrypedrosa-create/nexlevr-intermediate-task-02.git
 cd nexlevr-intermediate-task-02/task-02-sigma-detection-rules
 python3 -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate.fish  # Mokka uses fish shell
 python -m pip install -r requirements.txt
 python test_rules.py
 ```
 
 If you already cloned the repository, use `git pull` in its root directory instead of cloning it again.
 
-**Expected from this synthetic matcher:** 5 rules, 15/15 expected outcomes, five suspicious-pattern matches, five benign matches, five nonmatching examples. Record your actual terminal results; don't claim personal test execution until performed.
+**Expected from this synthetic matcher:** 5 rules, 15/15 expected outcomes, five suspicious-pattern matches, five benign matches, five nonmatching examples. The uploaded Mokka terminal screenshot confirms the limited synthetic matcher returned 15/15 expected outcomes. Official Sigma validation remains outstanding.
 
 For proper Sigma rule validation later, use the [official Sigma CLI](https://github.com/SigmaHQ/sigma-cli) and a backend/pipeline that maps the exact log fields. Conversion is not deployment. Some event sources require auditing or Sysmon configuration to be enabled.
 
-## Evidence screenshots for submission
+## Evidence screenshots uploaded
 
-- `01-rule-files.png`: show the five YAML filenames using `ls rules/`.
-- `02-synthetic-tests.png`: show the results of `python test_rules.py` on Mokka.
-- `03-rule-and-false-positives.png`: show one YAML rule with logsource, detection, falsepositives, and ATT&CK mapping.
-- `04-official-validation.png`: optional, only if you actually run official Sigma validation; label it accurately.
+The three PNGs were uploaded directly to this Task 02 folder, not to an `evidence/` subfolder:
+
+- [01-rule-files.png](01-rule-files.png): five YAML filenames in the Mokka terminal, with GitHub repository view.
+- [02-synthetic-tests.png](02-synthetic-tests.png): 15/15 expected outcomes from the limited Python matcher on Mokka.
+- [03-rule-and-false-positives.png](03-rule-and-false-positives.png): PowerShell YAML rule, detection, falsepositives, and ATT&CK tags.
+
+**Fish shell note:** Use `source .venv/bin/activate.fish` on Mokka. The uploaded terminal screenshot shows a harmless failed attempt to source the Bash activation file, followed by successful execution of `python test_rules.py`.
+
+- `04-official-validation.png`: optional, only if official Sigma validation is actually run and verified.
 
 See [TEST-REPORT.md](TEST-REPORT.md) for the full false-positive review.
 
