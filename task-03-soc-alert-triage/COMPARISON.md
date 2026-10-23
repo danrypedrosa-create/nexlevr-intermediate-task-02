@@ -1,6 +1,6 @@
 # SOC Alert Triage — Verdict Comparison
 
-I prepared ten fictional alerts and compared the two verdicts I independently recorded with the model's assessments. For Alerts 03–10, I have not recorded a separate personal verdict.
+I prepared ten fictional alerts and compared the two verdicts I independently recorded with the model's assessments. For Alerts 03–10, I have prepared model-written answer drafts, but I have not recorded separate independent personal verdicts.
 
 | Alert | Scenario | My verdict / severity | Model verdict / severity | Observation |
 |---|---|---|---|---|
@@ -21,7 +21,7 @@ For **Alert 01**, I chose True Positive and Medium severity because 47 failed lo
 
 For **Alert 02**, I chose TBC and Medium severity because the source IP and deployment purpose had not been verified. The model also chose TBC but recommended High severity because the `deploy` account successfully authenticated after multiple failures.
 
-For **Alerts 03–10**, I can review the provided triage examples and note the evidence gaps, but I cannot claim an independent verdict or a valid agreement rate.
+For **Alerts 03–10**, I can review the [prepared answer drafts](analysis/) and the model's reports, but these share their source and are not an independent two-party comparison. I cannot claim a personal verdict or a valid agreement rate for them.
 
 The main risk I noticed is **overconfidence**. I should not classify a confirmed account compromise, malware infection, command-and-control connection, or data exfiltration without supporting evidence. Approved tasks, authorized tests and scheduled maintenance can also trigger valid detections.
 
@@ -31,7 +31,20 @@ The main risk I noticed is **overconfidence**. I should not classify a confirmed
 
 - [My Alert 01 verdict](analysis/alert-01-manual.md)
 - [My revised Alert 02 verdict](analysis/alert-02-manual.md)
-- [Ten model-generated triage reviews](analysis/)
+- [Eight prepared answer drafts and ten model-generated triage reviews](analysis/)
 - [Original simulated alerts](alerts/)
 
 I do not report an AI accuracy percentage because only two cases have independent verdicts and the dataset does not establish full ground truth.
+
+## Prepared answer drafts — Alerts 03–10
+
+- [Alert 03 — Suspicious PowerShell (TP (suspicious) / High)](analysis/alert-03-answer-draft.md)
+- [Alert 04 — Port scanning (TBC / Medium)](analysis/alert-04-answer-draft.md)
+- [Alert 05 — Phishing email (TP (suspicious) / Medium)](analysis/alert-05-answer-draft.md)
+- [Alert 06 — Scheduled task (FP (authorized) / Low)](analysis/alert-06-answer-draft.md)
+- [Alert 07 — Malware detection (EICAR test) (FP (authorized test) / Low)](analysis/alert-07-answer-draft.md)
+- [Alert 08 — Outbound connection (TBC / High)](analysis/alert-08-answer-draft.md)
+- [Alert 09 — Administrative RDP activity (FP (authorized) / Low)](analysis/alert-09-answer-draft.md)
+- [Alert 10 — Possible data exfiltration (TBC / High)](analysis/alert-10-answer-draft.md)
+
+These drafts require my review before they can be called my own verdicts.

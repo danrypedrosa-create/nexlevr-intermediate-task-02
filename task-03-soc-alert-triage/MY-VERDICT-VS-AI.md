@@ -19,7 +19,22 @@ I placed my independent decisions beside the AI classifications so I can compare
 
 **TP** = True Positive (suspicious behavior detected, not automatically a confirmed compromise). **FP** = False Positive as a malicious-incident classification. **TBC** = To Be Confirmed.
 
-A dash (—) means I did **not** independently record a personal verdict for that case. The write-ups for Alerts 03–10 were prepared with AI assistance; they should not be used as separate human verdicts.
+A dash (—) means I did **not** independently record a personal verdict for that case. The write-ups and answer drafts for Alerts 03–10 were prepared by the model and need my own review. They are not separate independent human verdicts.
+
+## Prepared Answers for Alerts 03–10
+
+These are **ready-to-review answer drafts**, not verdicts I independently gave. They use the same simulated evidence as the AI assessments, so matching answers are not independent agreement.
+
+| Alert | Prepared answer | AI verdict | Difference |
+|---|---|---|---|
+| 03 — Suspicious PowerShell | [TP (suspicious) / High](analysis/alert-03-answer-draft.md) | [AI report](analysis/ai-triage-03.md) | Same evidence and model-prepared reasoning; not a valid human-vs-AI agreement |
+| 04 — Port scanning | [TBC / Medium](analysis/alert-04-answer-draft.md) | [AI report](analysis/ai-triage-04.md) | Same evidence and model-prepared reasoning; not a valid human-vs-AI agreement |
+| 05 — Phishing email | [TP (suspicious) / Medium](analysis/alert-05-answer-draft.md) | [AI report](analysis/ai-triage-05.md) | Same evidence and model-prepared reasoning; not a valid human-vs-AI agreement |
+| 06 — Scheduled task | [FP (authorized) / Low](analysis/alert-06-answer-draft.md) | [AI report](analysis/ai-triage-06.md) | Same evidence and model-prepared reasoning; not a valid human-vs-AI agreement |
+| 07 — Malware detection (EICAR test) | [FP (authorized test) / Low](analysis/alert-07-answer-draft.md) | [AI report](analysis/ai-triage-07.md) | Same evidence and model-prepared reasoning; not a valid human-vs-AI agreement |
+| 08 — Outbound connection | [TBC / High](analysis/alert-08-answer-draft.md) | [AI report](analysis/ai-triage-08.md) | Same evidence and model-prepared reasoning; not a valid human-vs-AI agreement |
+| 09 — Administrative RDP activity | [FP (authorized) / Low](analysis/alert-09-answer-draft.md) | [AI report](analysis/ai-triage-09.md) | Same evidence and model-prepared reasoning; not a valid human-vs-AI agreement |
+| 10 — Possible data exfiltration | [TBC / High](analysis/alert-10-answer-draft.md) | [AI report](analysis/ai-triage-10.md) | Same evidence and model-prepared reasoning; not a valid human-vs-AI agreement |
 
 ## Alert 01 — SSH Brute-Force Activity
 
@@ -51,7 +66,7 @@ A dash (—) means I did **not** independently record a personal verdict for tha
 
 - **Verdict agreement:** 2 of 2 cases where I gave my own independent verdict.
 - **Severity agreement:** 1 of 2 comparable cases.
-- **Missing comparison:** Alerts 03–10 do not yet have separate personal verdicts, so I cannot count them as agreements or disagreements.
+- **Missing comparison:** Alerts 03–10 have answer drafts but not separate personal verdicts, so I cannot count them as agreements or disagreements.
 - **Accuracy:** I am not reporting an AI accuracy rate because these synthetic cases do not provide enough independent ground truth.
 
 My main takeaway is to check the available evidence, verify whether the activity was authorized, and avoid claiming compromise or malicious intent when the logs do not prove it.
